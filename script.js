@@ -12,6 +12,18 @@ var isOp4;
 var isOp5;
 var possibleOptions = [];
 
+// Variable for the button
+var generateButton = document.getElementById("generate");
+
+// Variable for the Text Box
+var textBox = document.getElementById("password");
+
+
+// Initialize confirms function on button click.
+generateButton.addEventListener("click", function() {
+  confirms();
+});
+
 // Write a function that confirms which options the user would like to enable.
 // After all the confirms are completed, invoke optionBuilder()
 function confirms() {
@@ -53,6 +65,7 @@ function optionBuilder() {
 // Checks that the number of characters is between 8 and 128. If it is a number outside of the range it asks them to pick a correct number and sends them back to the confirm function. A correct number will invoke getString.
 function charCheck(){
   if (isOp5 < 8 || isOp5 > 128){
+possibleOptions = []
     alert("Please select a character length between 8 and 128.");
     confirms();
     }
@@ -61,20 +74,18 @@ function charCheck(){
       }
 }
 
-// Random number generator using the number of characters that the user submitted in isOp5.
+// Random number generator.
 function randomNumber() {
-  return Math.floor(Math.random() * isOp5)
+  return Math.floor(Math.random() * possibleOptions.length)
 };
 
-
+// function that uses random numbers to create a string based on the possible options selected by the user. Puts generated password in the text box.
 function getString() {
   var text = "";
   
   for (var i = 0; i < isOp5; i++) {
       text+=possibleOptions[randomNumber()]
   };
-  alert(text);
+  textBox.textContent = text;
 };
 
-
-confirms();
