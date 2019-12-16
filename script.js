@@ -12,8 +12,11 @@ var isOp4;
 var isOp5;
 var possibleOptions = [];
 
-// Variable for the button
+// Variable for the buttons
 var generateButton = document.getElementById("generate");
+var copyButton = document.getElementById("copy-button")
+
+
 
 // Variable for the Text Box
 var textBox = document.getElementById("password");
@@ -88,4 +91,24 @@ function getString() {
   };
   textBox.textContent = text;
 };
+
+
+// BONUS
+
+
+copyButton.addEventListener("click", function() {
+   /* Get the text field */
+   var copyText = document.getElementById("password");
+
+   /* Select the text field */
+   copyText.select();
+   copyText.setSelectionRange(0, 99999);
+ 
+   /* Copy the text inside the text field */
+   document.execCommand("copy");
+
+   /* Alert the copied text to the user */
+  alert("Copied your password: " + copyText.value);
+});
+
 

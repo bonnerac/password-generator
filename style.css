@@ -1,0 +1,38 @@
+body{
+    background-image: url("pictures/wallpaperbro-421003_");
+}
+h1{
+    color: lightgray;
+    text-align: center;
+}
+h2{
+    color: lightgray;
+    text-align: center;
+}
+#spacer{
+    height: 30px;
+}
+#password{
+    width: 100%;
+    height: 100%;
+    border: black 2px solid;
+}
+.card-body{
+    height: 340px;
+}
+#copy-button{
+    float: right;
+    border: black 2px solid;
+}
+#generate{
+    border: black 2px solid;
+}
+.card-body{
+    border: black 2px solid;
+}
+@media only screen and (max-width: 435px) {
+    #generate {
+      float: right;
+    }
+    
+  }

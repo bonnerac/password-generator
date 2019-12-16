@@ -6,28 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+        <div class="row"></div>
+         <div class="col-12" id="spacer"></div>
+        <div class="row">
+          <div class= "col-1 col-md-2 col-lg 3"></div>
+          <div class="col-10 col-md-8 col-lg-6">
+            <div class="card border-dark mb-3">
+              <div class="card-header bg-secondary">
+                <h2>Generate a Password</h2>
+              </div>
+              <div class="card-body bg-info">
+                <textarea
+                  readonly
+                  id="password"
+                  placeholder="Your Secure Password"
+                  aria-label="Generated Password"
+                ></textarea>
+              </div>
+              <div class="card-footer bg-secondary">
+                <button id="generate" type="button" class="btn btn-info">Generate Password</button>
+                <button id="copy-button" type="button" class="btn btn-info">Copy to Clipboard</button>
+              </div>
+            </div>
+          </div>
+          <div class= "col-1 col-md-2 col-lg 3"></div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
     </div>
     <script src="script.js"></script>
   </body>
