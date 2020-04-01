@@ -4,10 +4,14 @@ body{
 h1{
     color: lightgray;
     text-align: center;
+    font-family: 'Share Tech', sans-serif;
+
 }
 h2{
     color: lightgray;
     text-align: center;
+    font-family: 'Share Tech', sans-serif;
+  
 }
 #spacer{
     height: 30px;
@@ -19,16 +23,20 @@ h2{
 }
 .card-body{
     height: 340px;
+    font-family: 'Open Sans', sans-serif;
 }
 #copy-button{
     float: right;
     border: black 2px solid;
+    font-family: 'Open Sans', sans-serif;
 }
 #generate{
     border: black 2px solid;
+    font-family: 'Open Sans', sans-serif;
 }
 .card-body{
     border: black 2px solid;
+    
 }
 @media only screen and (max-width: 435px) {
     #generate {
