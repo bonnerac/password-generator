@@ -17,6 +17,7 @@ There's nothing to install! Just go to https://bonnerac.github.io/password-gener
 * CSS
 * JavaScript
 * Bootstrap
+* Google Fonts
 
 ## How It Works
 
