@@ -41,6 +41,10 @@ The application will create a password using the user's options. If they don't p
 
 The user can also click the **Copy to Clipboard** button which takes the created password and copies it to the user's clipboard.
 
+## Author
+* Alex Bonner
+  * https://github.com/bonnerac
+
 ## Credits and Thanks
 
 * The background image was found as a free download from (http://www.wallpaperbro.com).
