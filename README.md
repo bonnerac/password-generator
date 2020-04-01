@@ -10,7 +10,7 @@ In the internet age, lots of user information is stored online. In many cases, t
 
 ## How It Works
 
-The user clicks on the **Generate Password** button to star the application. The user then chooses what kinds of characters are included in their password. Their choices are:
+The user clicks on the **Generate Password** button to star the application. The user then has the option to choose what kinds of characters are included in their password. Their choices are:
 
 * **Special Characters** 
 * **Numbers** 
@@ -18,22 +18,19 @@ The user clicks on the **Generate Password** button to star the application. The
 * **Lowercase Letters** 
 * **Number of Characters**
 
-As long as the user chooses at least one of these categories, the application will create a password with the length that they requested. If they don't pick at least one, they will be directed to try again. 
+The user must select between one and four of the following choices:
+* Special Characters
+* Numbers
+* Capital Letters
+* Lowercase Letters
 
-There is also a **Copy to Clipboard** button which takes the created password and copies it to the user's clipboard.
+And a password length (between 8 and 128 characters)
 
-## Complications
+The application will create a password using the user's options. If they don't pick at least one choice, or a correct character length, they will be directed to try again.
 
-During the process of making this password generator, I did run into some problems: 
-
-* I had issues creating a nice look for desktop and mobile.
-    * I had a nice look going for the desktop versoin, but once I saw how it would look on mobile, I didn't like how the buttons overlapped once it got below 436px. I solved it by floating both buttons right, making it more asthetically pleasing.
-* I had some issues with my javascript code, when it came to the **charCheck** function. If the user fails to select between 8 and 128 characters, it would send them back to the **confirms** function. I was having lots of issues with values not coming out right, because I didn't empty the **possibleOptions** array. 
-    * Once I emptied it before going back to **confirms**, everything worked much better.
-
-
+The user can also click the **Copy to Clipboard** button which takes the created password and copies it to the user's clipboard.
 
 ## Credits and Thanks
 
 The background image was found as a free download from (http://www.wallpaperbro.com).
-Thanks to Paul for helping me solve my issues with the **possibleOptions** array.
+Thanks to Paul (https://github.com/PCeeeZy) for helping me solve my issues with the **possibleOptions** array.
