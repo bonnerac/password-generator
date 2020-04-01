@@ -1,6 +1,6 @@
 # Password Generator
 
-## Desrciption
+## Description
 
 An application that generates a random password based on user-selected criteria.
 
@@ -12,6 +12,11 @@ In the internet age, lots of user information is stored online. In many cases, t
 
 There's nothing to install! Just go to https://bonnerac.github.io/password-generator/ to start.
 
+## Technologies Used
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
 
 ## How It Works
 
