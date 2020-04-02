@@ -37,6 +37,24 @@ btn.onclick = function () {
   modal.style.display = "block";
 }
 
+
+// Test confirm/deny
+var conBtn = document.getElementById("confirmBtn")
+conBtn.onclick = function () {
+  console.log("Confirm")
+}
+var denBtn = document.getElementById("denyBtn")
+denBtn.onclick = function () {
+  console.log("Deny")
+}
+
+// When user clicks yes or no, save it in a variable
+// var answer = this.getAttribute('data-name')
+// console.log(answer)
+
+
+
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
