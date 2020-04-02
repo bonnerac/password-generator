@@ -17,6 +17,7 @@ There's nothing to install! Just go to https://bonnerac.github.io/password-gener
 * CSS
 * JavaScript
 * Bootstrap
+* Google Fonts
 
 ## How It Works
 
@@ -39,6 +40,10 @@ And a password length (between 8 and 128 characters)
 The application will create a password using the user's options. If they don't pick at least one choice, or a correct character length, they will be directed to try again.
 
 The user can also click the **Copy to Clipboard** button which takes the created password and copies it to the user's clipboard.
+
+## Author
+* Alex Bonner
+  * https://github.com/bonnerac
 
 ## Credits and Thanks
 
