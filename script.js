@@ -1,7 +1,7 @@
 // Variables for Character Sets
-var Special =  ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "`", "{", "|", "}", "~"];
+var Special = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "`", "{", "|", "}", "~"];
 var Numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var LowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s","t", "u", "v", "w", "x", "y", "z"];
+var LowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var UpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Other Global Variables
@@ -22,8 +22,36 @@ var copyButton = document.getElementById("copy-button")
 var textBox = document.getElementById("password");
 
 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 // Initialize confirms function on button click.
-generateButton.addEventListener("click", function() {
+generateButton.addEventListener("click", function () {
   confirms();
 });
 
@@ -43,38 +71,38 @@ function confirms() {
 
 function optionBuilder() {
   if (isOp1 || isOp2 || isOp3 || isOp4) {
-      if (isOp1) {
-          possibleOptions = possibleOptions.concat(Special)
-      };
-      
-      if (isOp2) {
-          possibleOptions = possibleOptions.concat(Numbers)
-      };
-      
-      if (isOp3) {
-          possibleOptions = possibleOptions.concat(LowerCase)
-      };
-
-      if (isOp4) {
-        possibleOptions = possibleOptions.concat(UpperCase)
+    if (isOp1) {
+      possibleOptions = possibleOptions.concat(Special)
     };
-      charCheck();
+
+    if (isOp2) {
+      possibleOptions = possibleOptions.concat(Numbers)
+    };
+
+    if (isOp3) {
+      possibleOptions = possibleOptions.concat(LowerCase)
+    };
+
+    if (isOp4) {
+      possibleOptions = possibleOptions.concat(UpperCase)
+    };
+    charCheck();
   } else {
-      alert("You must select at least one character type.");
-      confirms();
+    alert("You must select at least one character type.");
+    confirms();
   }
 };
 
 // Checks that the number of characters is between 8 and 128. If it is a number outside of the range it asks them to pick a correct number and sends them back to the confirm function. A correct number will invoke getString.
-function charCheck(){
-  if (isOp5 < 8 || isOp5 > 128){
-possibleOptions = []
+function charCheck() {
+  if (isOp5 < 8 || isOp5 > 128) {
+    possibleOptions = []
     alert("Please select a character length between 8 and 128.");
     confirms();
-    }
-      else{
-        getString();
-      }
+  }
+  else {
+    getString();
+  }
 }
 
 // Random number generator.
@@ -85,9 +113,9 @@ function randomNumber() {
 // function that uses random numbers to create a string based on the possible options selected by the user. Puts generated password in the text box.
 function getString() {
   var text = "";
-  
+
   for (var i = 0; i < isOp5; i++) {
-      text+=possibleOptions[randomNumber()]
+    text += possibleOptions[randomNumber()]
   };
   textBox.textContent = text;
 };
@@ -96,18 +124,18 @@ function getString() {
 // BONUS
 
 
-copyButton.addEventListener("click", function() {
-   /* Get the text field */
-   var copyText = document.getElementById("password");
+copyButton.addEventListener("click", function () {
+  /* Get the text field */
+  var copyText = document.getElementById("password");
 
-   /* Select the text field */
-   copyText.select();
-   copyText.setSelectionRange(0, 99999);
- 
-   /* Copy the text inside the text field */
-   document.execCommand("copy");
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
 
-   /* Alert the copied text to the user */
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text to the user */
   alert("Copied your password: " + copyText.value);
 });
 
