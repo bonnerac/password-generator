@@ -41,6 +41,10 @@ The application will create a password using the user's options. If they don't p
 
 The user can also click the **Copy to Clipboard** button which takes the created password and copies it to the user's clipboard.
 
+## Future Improvements
+
+In the future, I would like to replace all of the alerts/confirms/etc. with modals for a more professional and customizable look.
+
 ## Author
 * Alex Bonner
   * https://github.com/bonnerac
